@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="20"
+      fx:controller="com.example.apputeis.controller.IMCController"
+      prefHeight="500.0" prefWidth="500.0">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label fx:id="pesoLabel" text="Informe seu peso:"/>
+    <TextField fx:id="pesoText"/>
+    <Label fx:id="alturaLabel" text="Informe sua altura:"/>
+    <TextField fx:id="alturaText"/>
+    <HBox fx:id="painelButtons">
+        <Button fx:id="calcularButton" text="Calcular" onMouseClicked="#onCalcularButtonClicked"/>
+        <Button fx:id="limparButton" onMouseClicked="#onLimparMouseClicked" text="Limpar"/>
+        <Button onMouseClicked="#onSairMouseClicked" text="Sair" />
+    </HBox>
+    <Label fx:id="resultadoLabel"/>
+    <Label fx:id="valorIMCLabel"/>
+
+</VBox>
+

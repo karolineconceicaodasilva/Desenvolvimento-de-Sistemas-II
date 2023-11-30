@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.acessobanco.CadastroAlunosController"
+      fx:id="root"
+      prefHeight="500.0" prefWidth="400.0"
+      spacing="20"
+      alignment="CENTER">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="modoLabel" />
+
+    <GridPane hgap="5" vgap="5" alignment="CENTER">
+
+        <Label fx:id="nomeLabel" text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nomeText" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label fx:id="pesoLabel" text="Peso:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="pesoText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label fx:id="cpfLabel" text="cpf:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="cpfText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Button fx:id="salvarButton" onMouseClicked="#onSalvarButtonClick" text="Salvar" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Button fx:id="sairModoEdicaoButton" onMouseClicked="#onSairModoEdicaoButtonClick" text="Sair do modo de edição" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    </GridPane>
+
+    <VBox>
+        <Label fx:id="pesquisaPorIdLabel" text="Pesquisa por id" />
+        <HBox>
+            <TextField fx:id="pesquisaPorIdText" />
+            <Button fx:id="pesquisaPorIdButton" onMouseClicked="#onPesquisaPorIdButtonClick" text="Pesquisar" />
+            <Button fx:id="todosButton" onMouseClicked="#onPesquisaTodosButtonClick" text="Mostrar todos" />
+        </HBox>
+    </VBox>
+
+    <TableView fx:id="tableAlunos">
+        <columns>
+            <TableColumn fx:id="colunaId" text="Id" />
+            <TableColumn fx:id="colunaNome" text="Nome" />
+            <TableColumn fx:id="colunaPeso" text="Peso" />
+            <TableColumn fx:id="colunaCpf" text="Cpf" />
+        </columns>
+    </TableView>
+
+    <HBox>
+        <Button fx:id="editarButton" onMouseClicked="#onEditarButtonClick" text="Editar selecionado" />
+        <Button fx:id="excluirButton" onMouseClicked="#onExcluirButtonClick" text="Excluir selecionado" />
+    </HBox>
+
+    <Button fx:id="sairButton" onMouseClicked="#onSairButtonClick" text="Sair"/>
+
+</VBox>

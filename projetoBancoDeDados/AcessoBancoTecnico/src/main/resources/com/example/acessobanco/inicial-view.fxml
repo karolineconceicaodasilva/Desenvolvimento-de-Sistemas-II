@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.acessobanco.InicialController"
+      prefHeight="400.0" prefWidth="600.0"
+      alignment="CENTER"
+      spacing="20">
+
+    <padding>
+        <Insets left="20" top="20" right="20" bottom="20" />
+    </padding>
+
+    <Button onMouseClicked="#onCadastroAlunosButtonClicked" fx:id="cadastroAlunosButton" text="Cadastro de Alunos" />
+    <Button onMouseClicked="#onSairButtonClicked" fx:id="sairButton" text="Sair" />
+
+</VBox>

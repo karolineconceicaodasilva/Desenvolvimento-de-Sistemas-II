@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="20"
+      fx:controller="com.example.apputeis.controller.ConversaoController"
+      prefHeight="500.0" prefWidth="500.0">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label fx:id="realLabel" text="Informe o valor em Reais R$:"/>
+    <TextField fx:id="realText"/>
+    <Label fx:id="opcaoLabel" text="E escolha uma das Opções"/>
+    <ComboBox fx:id="cbCorversao" onMouseClicked="#onCoversaoMouseClicked" promptText="Moedas"/>
+    <HBox>
+    <Button fx:id="comboBoxButton" onMouseClicked="#onCalcularMouseClicked" text="Converter"/>
+        <Button fx:id="limparButton" onMouseClicked="#onLimparMouseClicked" text="Limpar"/>
+        <Button onMouseClicked="#onSairMouseClicked" text="Sair" />
+    </HBox>
+    <Label fx:id="resultLabel"/>
+</VBox>

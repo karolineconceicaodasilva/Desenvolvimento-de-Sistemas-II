@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.apputeis.controller.MenuController"
+      alignment="CENTER"
+      spacing="20"
+      prefHeight="500.0" prefWidth="500.0">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+    <Button fx:id="notasButton" onMouseClicked="#onCalcularMouseClicked" text="Calcular notas" />
+    <Button fx:id="produtosButton" onMouseClicked="#onProdutosMouseClicked" text="Calcular total produtos" />
+    <Button fx:id="imcButton" onMouseClicked="#onIMCMouseClicked" text="Calcular o IMC" />
+    <Button fx:id="envelhecerButton" onMouseClicked="#onClassificarMouseClicked" text="Classificar sua idade" />
+    <Button fx:id="coversaoButtonimcButton" onMouseClicked="#onCoversaoMouseClicked" text="Calcular Coversão de Moedas" />
+    <Button fx:id="simulacaoButton" onMouseClicked="#onSimulacaoMouseClicked" text="Calcular simulação de valores de Curso" />
+    <Button onMouseClicked="#onSairMouseClicked" text="Sair" />
+
+    <Label fx:id="nomeLabel" />
+</VBox>
